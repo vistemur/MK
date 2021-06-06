@@ -138,8 +138,9 @@ function changeHP(player) {
 	const $playerLife = document.querySelector(".player" + player.playerNumber + " .life");
 
 	player.hp -= random(1, 20);
-	if (player.hp <= 0)
+	if (player.hp <= 0) {
 		player.hp = 0;
+	}
 	$playerLife.style.width = player.hp + '%';
 }
 
